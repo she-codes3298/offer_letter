@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Document with Border Background</title>
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background: #f0f0f0;
+    }
+
+    .page-container {
+      width: 950px;
+      margin: 30px auto;
+      position: relative;
+    }
+
+    .border-image {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    .content {
+      position: relative;
+      z-index: 1;
+      padding: 140px 70px;
+      box-sizing: border-box;
+    }
+     .header h1 {
+         font-family: "Crimson Text", serif;
+  font-weight: 400;
+            
+            color: #2c3e50;
+            font-size: 26px;
+            margin-bottom: 15px;
+            font-weight: bold;
+            text-decoration: underline;
+        }
+
+        .content h2 {
+             font-family: "Crimson Text", serif;
+  font-weight: 400;
+            color: #2c3e50;
+            font-size: 18px;
+            margin-top: 10px;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        .content h3 {
+             font-family: "Crimson Text", serif;
+  font-weight: 400;
+            color: #34495e;
+            font-size: 17px;
+            margin-top: 10px;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        .content p {
+             font-family: "Urbanist", sans-serif;
+          
+            font-size: 15px;
+            letter-spacing: 0.5;
+            line-height: 1.1;
+            
+        }
+
+        .signature-section {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 2px solid #d4af37;
+        }
+
+        .signature-section p {
+           font-family: "Crimson Text", serif;
+  font-weight: 400;
+            text-align: center;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .signature-row {
+            font-family: "Urbanist", sans-serif;
+            display: flex;
+            gap:50px;
+            align-items: flex-start;
+            margin-top: 10px;
+            margin-left:110px
+        }
+
+        .signature-left, .signature-right {
+            width: 45%;
+        }
+
+        .signature-line {
+            border-bottom: 2px solid #333;
+            width: 200px;
+            height: 20px;
+            display: inline-block;
+            margin-left: 10px;
+        }
+        .employment{
+          padding-right: 40px;
+        }
+        .section{
+          margin-bottom:20px;
+          border-bottom: 1px solid black;
+        }
+        .main-section{
+          margin-top: 50px;
+        }
+  </style>
+</head>
+<body>
+  <div class="page-container">
+    <img src="border1.png" class="border-image" alt="Border" />
+   <div class="content">
+    
+      
+       
+        <div class="header">
+            <h1>EMPLOYMENT AGREEMENT</h1>
+        </div>
+
+        <div class="contract-content">
+          
+            <p class="employment">This EMPLOYMENT AGREEMENT ("Agreement") is made effective as of 15th June 2025 between "TechNova Solutions Pvt. Ltd."", having its registered office at 302, Skyline Tower, Mumbai, India (the "Company"), and "Ankit Verma", residing at 14-A Orchid Enclave, Pune, Maharashtra, India (the "Employee").</p>
+            
+            <h2>BACKGROUND</h2>
+            <p style="margin-bottom: 50px;">The Company wishes to hire the Employee for his experience and technical expertise. The Employee is willing to accept such employment under the terms outlined in this Agreement.</p>
+            </div>
+            <div class="section">
+            <h3>1. COMMENCEMENT DATE AND TERM</h3>
+            <p>The employment shall commence on 15th June 2025 for a fixed period of 18 months ending 15th December 2026. An initial probationary period of 3 months shall apply. Either party may terminate this Agreement in accordance with the terms stated herein or as provided by applicable law.</p>
+            </div>
+
+            <div class="section">
+            <h3>2. JOB TITLE AND DESCRIPTION</h3>
+            <p>Job Title: Software Engineer – Web Applications</p>
+            <p>The Employee shall be responsible for full-stack web development, maintaining internal tools, writing clean code, participating in code reviews, and collaborating with cross-functional teams on various client projects.</p>
+            </div>
+            
+            <div class="section">
+            <h3>3. COMPENSATION & BENEFITS</h3>
+            <p>Monthly Salary: ₹45,000</p>
+            <p>Subject to annual performance reviews, the Employee shall be eligible for an increment ranging between 8% and 12% after the first 12 months of employment.</p>
+            <p>No paid leave shall be available during the probation period. Statutory deductions such as PF, TDS, and professional tax shall apply as per law.</p>
+            </div>
+
+            <div class="section">
+            <h3>4. WORK HOURS AND LOCATION</h3>
+            <p>Location: Hybrid (3 days remote, 2 days in-office at Mumbai HQ)</p>
+            <p>Standard Working Hours: 9:30 AM to 6:30 PM IST. Extended hours may be required occasionally to meet project deadlines or support client deliverables.</p>
+            </div>
+
+            <div class="section">
+            <h3>5. CONFIDENTIALITY</h3>
+            <p>The Employee agrees not to disclose any confidential or proprietary information, trade secrets, or business practices acquired during the course of employment, both during and after termination.</p>
+            </div>
+
+            <div class="section">
+            <h3>6. NON-COMPETITION</h3>
+            <p>For a period of 12 months following the end of this Agreement, the Employee shall not work with or consult for any competitor or directly engage in similar business activities that may harm the interests of the Company.</p>
+            </div>
+
+            <div class="section">
+            <h3>7. TERMINATION</h3>
+            <p>This Agreement may be terminated by either party with 30 days’ prior written notice or payment in lieu thereof. In the event of resignation during the first 6 months post-probation, the Employee shall forfeit one month's salary as penalty.</p>
+            </div>
+
+            <div class="section">
+            <h3>8. GOVERNING LAW</h3>
+            <p>This Agreement shall be governed, interpreted, and enforced in accordance with the laws of the Republic of India. Disputes, if any, shall be subject to the jurisdiction of Mumbai courts.</p>
+            </div>
+
+            <div class="section">
+            <div class="signature-section">
+                <p style="text-align: center; font-weight: bold; margin-bottom: 30px;">
+                    IN WITNESS WHEREOF, the parties hereto have executed this Agreement on the date first written above.
+                </p>
+                <div class="signature-row">
+                    <div class="signature-left">
+                        <div>Employer Signature:</div>
+                        <div>Date:</div>
+                    </div>
+                    <div class="signature-right">
+                         <div>Employee Signature:</div>
+                        <div>Date:</div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+    
+</div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,311 @@
+body {
+    margin: 0;
+    padding: 20px;
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+}
+
+.page-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    background-color: white;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.15), 0 0 60px rgba(64, 112, 136, 0.1);
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    padding:50px;
+}
+
+/* Top Border */
+.top-border {
+    display: flex;
+    align-items: center;
+    height: 80px;
+    position: relative;
+    background: linear-gradient(135deg, #407088 0%, #5a8ca3 50%, #132743 100%);
+    box-shadow: inset 0 -3px 6px rgba(0,0,0,0.2);
+}
+
+.top-border-left {
+    height: 80px;
+    width: 300px;
+    background: linear-gradient(45deg, #407088, #5a8ca3);
+    position: relative;
+    clip-path: polygon(0 0, 85% 0, 100% 50%, 85% 100%, 0 100%);
+    box-shadow: 2px 0 8px rgba(0,0,0,0.15);
+}
+
+.top-border-left::before {
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    right: 60px;
+    height: 3px;
+    background: linear-gradient(90deg, rgba(255,255,255,0.6), transparent);
+    border-radius: 2px;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 80px;
+    background: radial-gradient(circle, white 60%, #f8f9fa 100%);
+    border: 3px solid #407088;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2), inset 0 2px 4px rgba(255,255,255,0.3);
+    position: relative;
+    z-index: 2;
+}
+
+.logo-container::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(45deg, #407088, #132743, #407088);
+    border-radius: 10px;
+    z-index: -1;
+}
+
+.logo-container img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2));
+}
+
+/* Placeholder for missing logo */
+.logo-placeholder img{
+    width: 70px;
+    height: 70px;
+    
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    
+}
+
+.top-border-right {
+    height: 80px;
+    flex: 1;
+    background: linear-gradient(-45deg, #132743, #1e3a5f);
+    position: relative;
+    clip-path: polygon(15% 0, 100% 0, 100% 100%, 0% 100%, 15% 50%);
+    box-shadow: -2px 0 8px rgba(0,0,0,0.15);
+}
+
+.top-border-right::before {
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: 60px;
+    right: 20px;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4));
+    border-radius: 2px;
+}
+
+/* Side Borders */
+.content-area {
+    display: flex;
+    min-height: 600px;
+}
+
+.left-border {
+    width: 30px;
+    display: flex;
+    gap: 10px;
+    padding: 10px 0;
+}
+
+.left-border-line {
+    width: 8px;
+    height: 100%;
+    border-radius: 4px;
+}
+
+.left-border-line:first-child {
+    background-color: #407088;
+}
+
+.left-border-line:last-child {
+    background-color: #132743;
+}
+
+.main-content {
+    flex: 1;
+    padding: 40px;
+    background-color: white;
+}
+
+.right-border {
+    width: 30px;
+    display: flex;
+    gap: 10px;
+    padding: 10px 0;
+}
+
+.right-border-line {
+    width: 8px;
+    height: 100%;
+    border-radius: 4px;
+}
+
+.right-border-line:first-child {
+    background-color: #407088;
+}
+
+.right-border-line:last-child {
+    background-color: #132743;
+}
+
+/* Bottom Border */
+.bottom-border {
+    height: 80px;
+    background: linear-gradient(-45deg, #132743, #1e3a5f, #132743);
+    position: relative;
+    box-shadow: inset 0 3px 6px rgba(0,0,0,0.2);
+}
+
+.bottom-border::before {
+    content: '';
+    position: absolute;
+    bottom: 10px;
+    left: 5%;
+    right: 5%;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+    border-radius: 2px;
+}
+
+.bottom-border::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 20px;
+    background: linear-gradient(180deg, rgba(255,255,255,0.1), transparent);
+}
+
+/* Content Styling */
+.content-title {
+     font-family: "Alumni Sans SC", sans-serif;
+    color: #132743;
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.content-text {
+    color: #333;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+/* Letter Styling */
+.letter-container {
+    font-family: 'Times New Roman', serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+.header {
+    font-family: "Roboto Condensed", sans-serif;
+    letter-spacing: 1px;
+    text-align: left;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.recipient {
+    margin-bottom: 30px;
+    font-family: "Roboto Condensed", sans-serif;
+    letter-spacing: 1px;
+}
+
+.recipient address {
+    font-style: normal;
+    margin-left: 20px;
+}
+
+h1 {
+     font-family: "Alumni Sans SC", sans-serif;
+    color: #132743;
+    font-size: 28px;
+    margin: 30px 0 20px 0;
+    text-decoration: underline;
+    text-align: center;
+    letter-spacing: 1.5px;
+}
+
+h2 {
+     font-family: "Alumni Sans SC", sans-serif;
+    color: #407088;
+    font-size: 25px;
+    margin: 25px 0 15px 0;
+    border-bottom: 1px solid #132743;
+    padding-bottom: 5px;
+    letter-spacing: 1.5px;
+}
+li{
+    font-family: "Roboto Condensed", sans-serif;
+    letter-spacing: 1px;
+}
+p{
+    font-family: "Roboto Condensed", sans-serif;
+    letter-spacing: 1px;;
+}
+
+.salary-table {
+    width: 100%;
+    
+    margin: 20px 0;
+    font-size: 14px;
+}
+
+.salary-table th,
+.salary-table td {
+    font-family: "Roboto Condensed", sans-serif;
+    letter-spacing: 1px;
+    border: 1px solid #132743 ;
+    padding: 8px 12px;
+    text-align: left;
+}
+
+.salary-table th {
+    background-color: #f8f9fa;
+    font-weight: bold;
+    color: #132743;
+}
+
+.total-row {
+
+    font-weight: bold;
+}
+
+
+
+.company-signature {
+    
+}
+
+.acceptance-section {
+    margin-top: 10px;
+    
+    
+}
+
+.signature-line {
+    border-bottom: 1px solid #333;
+    display: inline-block;
+    width: 200px;
+    margin-left: 10px;
+}

@@ -1,0 +1,269 @@
+body {
+    margin: 0;
+    padding: 20px;
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+}
+
+.document-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    background-color: white;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.15), 0 0 60px rgba(64, 112, 136, 0.1);
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    padding:50px;
+}
+
+
+
+
+.header-section {
+    position: relative;
+    height: 120px;
+    background: linear-gradient(90deg, #2d4a3e 0%, #346357 50%, #4a6b5d 100%);
+    overflow: hidden;
+}
+
+.logo-space {
+    position: absolute;
+    top: 20px;
+    left: 30px;
+    width: 180px;
+    height: 80px;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 12px;
+    border: 2px dashed rgba(255, 255, 255, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+}
+
+.logo-space:hover {
+    background: rgba(255, 255, 255, 0.25);
+    border-color: rgba(255, 255, 255, 0.6);
+    transform: scale(1.02);
+}
+
+.logo-placeholder {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 14px;
+    font-weight: 500;
+    text-align: center;
+    letter-spacing: 0.5px;
+}.logo-placeholder img{
+    width:150px;
+    height:auto;
+    border-radius: 5px;
+}
+
+.decorative-elements {
+    position: absolute;
+    right: 30px;
+    top: 20px;
+    display: flex;
+    gap: 15px;
+}
+
+.decoration-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.decoration-dot:nth-child(2) {
+    background: rgba(184, 165, 165, 0.3);
+}
+
+.decoration-dot:nth-child(3) {
+    background: rgba(255, 255, 255, 0.5);
+}
+
+.accent-bars {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 8px;
+    display: flex;
+}
+
+.accent-bar {
+    flex: 1;
+    height: 100%;
+}
+
+.accent-bar:nth-child(1) { background:  #4a6b5d; }
+.accent-bar:nth-child(2) { background: #346357; }
+.accent-bar:nth-child(3) { background: #4a6b5d; }
+.accent-bar:nth-child(4) { background: #1f3329; }
+
+.content-wrapper {
+    display: flex;
+    min-height: 600px;
+}
+
+.side-border {
+    width: 8px;
+    background: linear-gradient(180deg, #2d4a3e 0%, #346357 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.main-content {
+    flex: 1;
+    padding: 40px 50px;
+    background: linear-gradient(135deg, #ffffff 0%, #f8f9fd 100%);
+    position: relative;
+}
+
+.main-content::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, transparent 0%, #346357 50%, transparent 100%);
+    opacity: 0.3;
+}
+
+h2{
+    font-family: "Cinzel", serif;
+    margin-bottom:5px;
+    border-bottom: 2px solid #4a6b5d ;
+}
+
+.content-text {
+    font-size: 18px;
+    color: #2c3e50;
+    line-height: 1.6;
+    font-weight: 400;
+    position: relative;
+    z-index: 2;
+}
+
+.highlight-text {
+    background: linear-gradient(120deg, #2d4a3e 0%, #346357 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.content-accent {
+    position: absolute;
+    bottom: 20px;
+    right: 30px;
+    width: 60px;
+    height: 4px;
+    background: linear-gradient(90deg, #2d4a3e, #346357);
+    border-radius: 2px;
+    opacity: 0.6;
+}
+.recipient address {
+    font-family: "Roboto", sans-serif;
+  
+    font-style: normal;
+    margin-left: 20px;
+}
+
+.section{
+    margin-bottom: 20px;
+    
+}
+.signature-line {
+    border-bottom: 1px solid #333;
+    display: inline-block;
+    width: 200px;
+    margin-left: 10px;
+}
+.salary-table {
+    width: 100%;
+    
+    margin: 20px 0;
+    font-size: 16px;
+}
+
+.salary-table th,
+.salary-table td {
+    font-family: "Roboto", sans-serif;
+  
+    
+    letter-spacing: 1px;
+    border: 1px solid #132743 ;
+    padding: 8px 12px;
+    text-align: left;
+}
+
+.salary-table th {
+    background-color: #f8f9fa;
+    font-weight: bold;
+    color: #132743;
+}
+
+.total-row {
+
+    font-weight: bold;
+}
+h1{
+    font-family: "Cinzel", serif;
+    font-size:28px;
+    text-align: center;
+     text-decoration: underline;
+}
+li{ 
+    margin-left:15px;
+    font-size:16px;
+    letter-spacing:1px;
+
+}
+.position { 
+    font-family: "Roboto", sans-serif;
+  
+  
+    margin-left:15px;
+}
+p{
+    font-family: "Roboto", sans-serif;
+    font-size:16px;
+    letter-spacing:1px;
+    
+  
+}
+
+
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .document-container {
+        margin: 10px;
+        border-radius: 15px;
+    }
+    
+    .header-section {
+        height: 100px;
+    }
+    
+    .logo-space {
+        width: 150px;
+        height: 60px;
+        top: 15px;
+        left: 20px;
+    }
+    
+    .main-content {
+        padding: 30px 25px;
+    }
+    
+    .decorative-elements {
+        right: 20px;
+        top: 15px;
+    }
+}
