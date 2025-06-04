@@ -1,213 +1,386 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Document with Border Background</title>
- <link rel="preconnect" href="https://fonts.googleapis.com">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Offer Letter - Ultimate Co.</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: Arial, sans-serif;
-      background: #f0f0f0;
-    }
+<link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    .page-container {
-      width: 950px;
-      margin: 30px auto;
-      position: relative;
-    }
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f5f5f5;
+            padding: 20px;
+        }
 
-    .border-image {
-      width: 100%;
-      height: 100%;
-      position: absolute;
-      top: 0;
-      left: 0;
-      z-index: 0;
-      pointer-events: none;
-    }
+        .letter-container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 15px 40px rgba(20, 16, 16, 0.15);
+            border: 3px solid transparent;
+            background-clip: padding-box;
+        }
 
-    .content {
-      position: relative;
-      z-index: 1;
-      padding: 140px 70px;
-      box-sizing: border-box;
-    }
-     .header h1 {
-         font-family: "Crimson Text", serif;
-  font-weight: 400;
-            
-            color: #2c3e50;
-            font-size: 26px;
-            margin-bottom: 15px;
+        /* Enhanced border with gradient */
+        .letter-container::before {
+            content: '';
+            position: absolute;
+            top: -3px;
+            left: -3px;
+            right: -3px;
+            bottom: -3px;
+            background: linear-gradient(45deg, #ff9a3c 0%, #ffc93c 25%, #141010 50%, #ff9a3c 75%, #ffc93c 100%);
+            border-radius: inherit;
+            z-index: -1;
+            animation: borderGlow 3s ease-in-out infinite alternate;
+        }
+
+        @keyframes borderGlow {
+            0% {
+                filter: brightness(1) saturate(1);
+            }
+            100% {
+                filter: brightness(1.2) saturate(1.3);
+            }
+        }
+
+        /* Header with new gradient design */
+        .header {
+            position: relative;
+            height: 140px;
+            background: linear-gradient(135deg, #ff9a3c 0%, #ffc93c 60%, #ff9a3c 100%);
+            overflow: hidden;
+            border-bottom: 4px solid #141010;
+        }
+
+        /* Enhanced diagonal section with new color */
+        .header::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 0;
+            height: 0;
+            border-left: 280px solid #141010;
+            border-bottom: 140px solid transparent;
+            filter: drop-shadow(0 0 10px rgba(20, 16, 16, 0.3));
+        }
+
+        /* Decorative corner accents */
+        .header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(45deg, #ffc93c, transparent);
+            border-radius: 0 0 60px 0;
+            z-index: 1;
+        }
+
+        .logo {
+            position: absolute;
+            top: 40px;
+            right: 40px;
+            z-index: 3;
+        }
+
+        .logo-icon {
+            width: 45px;
+            height: 45px;
+            background: white;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             font-weight: bold;
+            font-size: 20px;
+            color: #ff9a3c;
+            transform: rotate(-12deg);
+            border: 2px solid #141010;
+            box-shadow: 0 4px 12px rgba(20, 16, 16, 0.2);
+        }
+
+        .company-info {
+            position: absolute;
+            top: 35px;
+            left: 40px;
+            z-index: 3;
+            text-align: left;
+        }
+
+        .company-name {
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 5px;
+            text-shadow: 2px 2px 4px rgba(20, 16, 16, 0.3);
+        }
+
+        .company-tagline {
+            color: white;
+            font-size: 11px;
+            opacity: 0.95;
+            letter-spacing: 1px;
+            text-shadow: 1px 1px 2px rgba(20, 16, 16, 0.3);
+        }
+        
+
+        /* Enhanced footer with new gradient design */
+        .footer {
+            position: relative;
+            height: 80px;
+            background: linear-gradient(135deg, #ff9a3c 0%, #ffc93c 60%, #ff9a3c 100%);
+            overflow: hidden;
+            margin-top: 30px;
+            border-top: 4px solid #141010;
+        }
+
+        /* Enhanced diagonal section for footer */
+        .footer::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 0;
+            border-right: 200px solid #141010;
+            border-bottom: 80px solid transparent;
+            filter: drop-shadow(0 0 10px rgba(20, 16, 16, 0.3));
+        }
+
+        /* Decorative footer accent */
+        .footer::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 80px;
+            height: 40px;
+            background: linear-gradient(225deg, #ffc93c, transparent);
+            border-radius: 80px 0 0 0;
+            z-index: 1;
+        }
+
+        .footer-content {
+            position: absolute;
+            bottom: 15px;
+            right: 40px;
+            z-index: 3;
+            text-align: right;
+        }
+
+        .footer-text {
+            color: white;
+            font-size: 12px;
+            font-weight: bold;
+            opacity: 0.95;
+            text-shadow: 2px 2px 4px rgba(20, 16, 16, 0.3);
+        }
+
+        .footer-subtext {
+            color: white;
+            font-size: 10px;
+            opacity: 0.9;
+            margin-top: 3px;
+            text-shadow: 1px 1px 2px rgba(20, 16, 16, 0.3);
+        }
+
+       .content {
+            position: relative;
+            z-index: 2;
+            padding:60px 50px;
+        }
+
+          h3 {
+            font-family: "Playfair Display", serif;
+            margin-bottom: 10px;
+            font-size: 21px;
+               border-bottom: 1px solid black;
+               padding:3px;
+        }
+        h2{
+          font-family: "Playfair Display", serif;
+            margin-bottom: 10px;
+            font-size: 21px;
+            font-size: 25px;
+            text-align: center;
+        }
+
+        h1 {
+            font-family: "Playfair Display", serif;
+            font-size: 28px;
+            text-align: center;
+            margin-bottom: 20px;
             text-decoration: underline;
         }
 
-        .content h2 {
-             font-family: "Crimson Text", serif;
-  font-weight: 400;
-            color: #2c3e50;
-            font-size: 18px;
-            margin-top: 10px;
-            margin-bottom: 5px;
-            font-weight: bold;
-        }
-
-        .content h3 {
-             font-family: "Crimson Text", serif;
-  font-weight: 400;
-            color: #34495e;
+        p {
+             font-family: "Jost", sans-serif;
+            line-height: 1.5;
+            margin-bottom: 10px;
             font-size: 17px;
-            margin-top: 10px;
-            margin-bottom: 5px;
-            font-weight: bold;
         }
-
-        .content p {
-             font-family: "Urbanist", sans-serif;
+        .section{
+            margin-bottom:20px;
           
-            font-size: 15px;
-            letter-spacing: 0.5;
-            line-height: 1.1;
-            
         }
-
-        .signature-section {
-            margin-top: 40px;
-            padding-top: 20px;
-            border-top: 2px solid #d4af37;
-        }
-
-        .signature-section p {
-           font-family: "Crimson Text", serif;
-  font-weight: 400;
-            text-align: center;
-            font-weight: bold;
-            margin-bottom: 15px;
+         .signature-section {
+            margin-top: 50px;
         }
 
         .signature-row {
-            font-family: "Urbanist", sans-serif;
             display: flex;
-            gap:50px;
-            align-items: flex-start;
-            margin-top: 10px;
-            margin-left:110px
+            justify-content: space-between;
+            margin-top: 40px;
         }
 
-        .signature-left, .signature-right {
+        .signature-left,
+        .signature-right {
+             font-family: "Jost", sans-serif;
             width: 45%;
         }
 
-        .signature-line {
-            border-bottom: 2px solid #333;
-            width: 200px;
-            height: 20px;
-            display: inline-block;
-            margin-left: 10px;
+        .signature-left div,
+        .signature-right div {
+            margin-bottom: 20px;
         }
-        .employment{
-          padding-right: 40px;
+        @media print {
+            body {
+                padding: 0;
+                background: white;
+            }
+            
+            .letter-container {
+                box-shadow: none;
+            }
+            
+            .letter-container::before {
+                display: none;
+            }
+            
+            @keyframes borderGlow {
+                0%, 100% { 
+                    filter: none; 
+                }
+            }
         }
-        .section{
-          margin-bottom:20px;
-          border-bottom: 1px solid black;
-        }
-        .main-section{
-          margin-top: 50px;
-        }
-  </style>
+    </style>
 </head>
 <body>
-  <div class="page-container">
-    <img src="border1.png" class="border-image" alt="Border" />
-   <div class="content">
-    
-      
-       
+    <div class="letter-container">
+        <!-- Header Section -->
         <div class="header">
-            <h1>EMPLOYMENT AGREEMENT</h1>
+            <div class="logo">
+                <div class="logo-icon"></div>
+            </div>
+            <div class="company-info">
+                <div class="company-name">InnovateHub Technologies Pvt. Ltd.</div>
+                <div class="company-tagline">MANAGEMENT AGENCY</div>
+            </div>
         </div>
 
-        <div class="contract-content">
-          
-            <p class="employment">This EMPLOYMENT AGREEMENT ("Agreement") is made effective as of 15th June 2025 between "TechNova Solutions Pvt. Ltd."", having its registered office at 302, Skyline Tower, Mumbai, India (the "Company"), and "Ankit Verma", residing at 14-A Orchid Enclave, Pune, Maharashtra, India (the "Employee").</p>
-            
+        <!-- Content Section -->
+        
+           <div class="content">
+        <h1>EMPLOYMENT AGREEMENT</h1>
+        
+        <div class="contract-content" >
+            <p>This EMPLOYMENT AGREEMENT ("Agreement") is made effective as of 1st July 2025 between "InnovateHub Technologies Pvt. Ltd.", having its registered office at 15th Floor, Tech Plaza, Sector 44, Gurgaon, Haryana, India (the "Company"), and "Priya Sharma", residing at B-204 Green Valley Apartments, Noida, Uttar Pradesh, India (the "Employee").</p>
+        
             <h2>BACKGROUND</h2>
-            <p style="margin-bottom: 50px;">The Company wishes to hire the Employee for his experience and technical expertise. The Employee is willing to accept such employment under the terms outlined in this Agreement.</p>
-            </div>
+            <p style="margin-bottom: 35px;">The Company is an innovative technology startup focused on AI-driven solutions and wishes to hire the Employee for their exceptional technical skills and product development expertise. The Employee is willing to accept such employment and contribute to the Company's mission of revolutionizing digital experiences.</p>
+        
             <div class="section">
-            <h3>1. COMMENCEMENT DATE AND TERM</h3>
-            <p>The employment shall commence on 15th June 2025 for a fixed period of 18 months ending 15th December 2026. An initial probationary period of 3 months shall apply. Either party may terminate this Agreement in accordance with the terms stated herein or as provided by applicable law.</p>
+                <h3>1. COMMENCEMENT DATE AND TERM</h3>
+                <p>The employment shall commence on 1st July 2025 for a fixed period of 24 months ending 30th June 2027. An initial probationary period of 6 months shall apply to assess mutual compatibility and performance standards. Either party may terminate this Agreement in accordance with the terms stated herein or as provided by applicable Indian labor laws.</p>
             </div>
 
             <div class="section">
-            <h3>2. JOB TITLE AND DESCRIPTION</h3>
-            <p>Job Title: Software Engineer – Web Applications</p>
-            <p>The Employee shall be responsible for full-stack web development, maintaining internal tools, writing clean code, participating in code reviews, and collaborating with cross-functional teams on various client projects.</p>
+                <h3>2. JOB TITLE AND DESCRIPTION</h3>
+                <p><strong>Job Title:</strong> Senior Full Stack Developer</p>
+                <p>The Employee shall be responsible for developing and maintaining web applications using modern JavaScript frameworks (React, Node.js), designing scalable backend architectures and RESTful APIs, collaborating with cross-functional teams including designers, product managers, and DevOps, implementing automated testing strategies and CI/CD pipelines, mentoring junior developers and contributing to technical documentation, and participating in code reviews while maintaining high coding standards.</p>
+            </div>
+             
+            <div class="section">
+                <h3>3. COMPENSATION & BENEFITS</h3>
+                <p>Monthly Salary: ₹85,000</p>
+                <p>Performance Incentives: Subject to annual performance reviews, the Employee shall be eligible for salary increments ranging between 15% and 25% after the first 12 months, based on individual performance and company growth metrics.</p>
+                <p>Equity Participation: Employee Stock Option Plan (ESOP) of 0.2% equity vesting over 4 years with a 1-year cliff period.</p>
+                <p>Benefits Package includes health insurance coverage for employee and family, annual learning & development budget of ₹25,000, flexible work arrangements and wellness programs, performance bonuses and team outing allowances.</p>
+                <p>Statutory deductions including PF, ESI, TDS, and professional tax shall apply as per Indian labor laws.</p>
+            </div>
+
+            <div class="section">
+                <h3>4. WORK HOURS AND LOCATION</h3>
+                <p><strong>Work Model:</strong> Remote-First (Monthly team meetups)</p>
+                <p>Standard Working Hours: 10:00 AM to 7:00 PM IST. The Company embraces a remote-first culture with optional co-working space access in Gurgaon. Monthly team collaboration sessions and quarterly offsites are organized for team building and strategic planning. Flexible working hours are encouraged with core collaboration hours from 11:00 AM to 4:00 PM IST.</p>
+            </div>
+
+            <div class="section">
+                <h3>5. CONFIDENTIALITY & INTELLECTUAL PROPERTY</h3>
+                <p>The Employee agrees to maintain strict confidentiality regarding all proprietary information including source code, algorithms, technical architectures, business strategies, client data, financial information, product roadmaps, user analytics, competitive intelligence, internal processes, methodologies, and trade secrets acquired during the course of employment, both during and after termination.</p>
+                <p>All intellectual property developed during employment shall belong to the Company, including innovations, improvements, and derivative works created using Company resources.</p>
             </div>
             
             <div class="section">
-            <h3>3. COMPENSATION & BENEFITS</h3>
-            <p>Monthly Salary: ₹45,000</p>
-            <p>Subject to annual performance reviews, the Employee shall be eligible for an increment ranging between 8% and 12% after the first 12 months of employment.</p>
-            <p>No paid leave shall be available during the probation period. Statutory deductions such as PF, TDS, and professional tax shall apply as per law.</p>
+                <h3>6. NON-COMPETITION & NON-SOLICITATION</h3>
+                <p>For a period of 18 months following the termination of this Agreement, the Employee agrees not to work with or provide services to direct competitors in the AI/tech solutions space, not to solicit Company employees, clients, or partners for competing ventures, and not to use confidential information to develop competing products or services that may harm the interests of the Company.</p>
+            </div>
+            
+            <div class="section">
+                <h3>7. TERMINATION CONDITIONS</h3>
+                <p>Notice Period: Either party may terminate this Agreement with 60 days prior written notice or payment in lieu thereof. The Company reserves the right to terminate employment immediately in cases of gross misconduct, breach of confidentiality, or violation of company policies.</p>
+                <p>Resignation Policy: If the Employee resigns within the first 12 months of employment, they shall serve the full notice period without the option of payment in lieu. Upon termination, the Employee must return all Company property, complete knowledge transfer activities, and cooperate in the transition process.</p>
+            </div>
+            
+            <div class="section">
+                <h3>8. GOVERNING LAW & DISPUTE RESOLUTION</h3>
+                <p>This Agreement shall be governed by the laws of the Republic of India. All disputes arising from this Agreement shall be resolved through good faith discussions between parties, binding arbitration under the Arbitration and Conciliation Act, 2015, with Courts in Gurgaon, Haryana having exclusive jurisdiction.</p>
             </div>
 
-            <div class="section">
-            <h3>4. WORK HOURS AND LOCATION</h3>
-            <p>Location: Hybrid (3 days remote, 2 days in-office at Mumbai HQ)</p>
-            <p>Standard Working Hours: 9:30 AM to 6:30 PM IST. Extended hours may be required occasionally to meet project deadlines or support client deliverables.</p>
-            </div>
-
-            <div class="section">
-            <h3>5. CONFIDENTIALITY</h3>
-            <p>The Employee agrees not to disclose any confidential or proprietary information, trade secrets, or business practices acquired during the course of employment, both during and after termination.</p>
-            </div>
-
-            <div class="section">
-            <h3>6. NON-COMPETITION</h3>
-            <p>For a period of 12 months following the end of this Agreement, the Employee shall not work with or consult for any competitor or directly engage in similar business activities that may harm the interests of the Company.</p>
-            </div>
-
-            <div class="section">
-            <h3>7. TERMINATION</h3>
-            <p>This Agreement may be terminated by either party with 30 days’ prior written notice or payment in lieu thereof. In the event of resignation during the first 6 months post-probation, the Employee shall forfeit one month's salary as penalty.</p>
-            </div>
-
-            <div class="section">
-            <h3>8. GOVERNING LAW</h3>
-            <p>This Agreement shall be governed, interpreted, and enforced in accordance with the laws of the Republic of India. Disputes, if any, shall be subject to the jurisdiction of Mumbai courts.</p>
-            </div>
-
-            <div class="section">
             <div class="signature-section">
-                <p style="text-align: center; font-weight: bold; margin-bottom: 30px;">
+                <p style="text-align: center; font-weight: bold; margin-bottom: 30px; font-family: Playfair Display, serif;">
                     IN WITNESS WHEREOF, the parties hereto have executed this Agreement on the date first written above.
                 </p>
                 <div class="signature-row">
                     <div class="signature-left">
-                        <div>Employer Signature:</div>
+                        <div>Company Representative:</div>
+                        <div>Rajesh Kumar</div>
+                        <div>Chief Technology Officer</div>
+                        <div>InnovateHub Technologies Pvt. Ltd.</div>
                         <div>Date:</div>
                     </div>
                     <div class="signature-right">
-                         <div>Employee Signature:</div>
+                        <div>Employee:</div>
+                        <div>Priya Sharma</div>
+                        <div>Senior Full Stack Developer</div>
                         <div>Date:</div>
                     </div>
                 </div>
             </div>
+
+        <!-- Footer Section -->
+        <div class="footer">
+            <div class="footer-content">
+                <div class="footer-text">Ultimate Co.</div>
+                <div class="footer-subtext">Excellence in Management</div>
             </div>
         </div>
     
-</div>
-  </div>
 </body>
 </html>

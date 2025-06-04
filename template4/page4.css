@@ -79,13 +79,21 @@
             padding:40px;
         }
 
-         h2, h3 {
+          h3 {
             font-family: "Playfair Display", serif;
             margin-bottom: 10px;
             font-size: 21px;
+             padding:3px;
+               border-bottom: 1px solid black;
         }
         h2{
+            font-family: "Playfair Display", serif;
+            margin-bottom: 10px;
+            font-size: 21px;
             font-size: 24px;
+            text-align: center;
+            padding:3px;
+        
         }
 
         h1 {
@@ -103,7 +111,7 @@
         }
         .section{
             margin-bottom:20px;
-            border-bottom: 1px solid black;;
+            
         }
 
         .signature-section {

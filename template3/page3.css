@@ -220,7 +220,7 @@ body {
 .header {
     font-family: "Roboto Condensed", sans-serif;
     letter-spacing: 1px;
-    text-align: left;
+    text-align: right;
     margin-bottom: 20px;
     font-weight: bold;
 }
